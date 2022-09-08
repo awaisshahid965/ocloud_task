@@ -1,13 +1,167 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+
+:root {
+  --cl-primary-old: #091C25;
+  --cl-primary: #0e2634;
+  --cl-primary-opaque: rgba(9, 28, 37, .9);
+  --cl-primary-opaque-1: rgba(155, 155, 155, 0.03);
+  --cl-border: #35515d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* resets */
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: 0;
+  outline: 0;
+  color: inherit;
+}
+/* resets */
+
+.App {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: left top;
+  position: relative;
+  isolation: isolate;
+}
+
+.App > .main-row {
+  max-width: 118rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.App::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)); */
+}
+
+
+/* reuseables */
+
+.btn {
+  font-size: 1.9rem;
+  padding: 1.65rem 2rem;
+  text-transform: uppercase;
+  border-radius: 20rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-large {
+  min-width: 35rem;
+}
+
+.btn-danger {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .5));
+  background-color: #CA0B0F;
+}
+
+/* reuseables end */
+
+
+/* navigation starts */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 0;
+}
+
+.nav .links_group a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 9px 22px 9px 30px;
+  text-transform: uppercase;
+  background-color: rgba(9, 28, 37, .5);
+  border-radius: 10rem;
+  backdrop-filter: blur(5px);
+}
+
+.nav .links_group a img {
+  margin-right: 1rem;
+}
+
+.nav .links_group a:not(:last-child) {
+  margin-right: 2rem;
+}
+/* navigation ends */
+
+
+
+/* description starts */
+.description {
+  background-color: var(--cl-primary-opaque);
+  padding: 3.5rem 3.5rem 5rem;
+  border: 2px solid var(--cl-border);
+  border-radius: 11px;
+  backdrop-filter: blur(10px);
+}
+
+.description .description--p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.description .btn img {
+  margin-left: 5px;
+}
+
+/* description card */
+.descpriction_card--wrapper {
+  padding: 3rem 0;
+}
+
+.descpriction_card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-column-gap: 2.25rem;
+  background-color: #0e263488;
+  padding: 1.8rem 2.85rem 2.25rem;
+  border-radius: 6px;
+}
+
+.descpriction_card--body h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.descpriction_card--body p {
+  font-size: 2rem;
+}
+
+.descpriction_card:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+
+.description .description--p:not(:last-child),
+.descpriction_card--body p:not(:last-child) {
+  margin-bottom: 2rem;
 }
