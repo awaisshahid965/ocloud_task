@@ -2,6 +2,7 @@ import React from 'react'
 
 // partials imports
 import DescriptionCard from '../partials/DescriptionCard'
+import Button from '../partials/Button'
 
 // images imports
 import arrowIcon from '../assets/arrow.png'
@@ -69,9 +70,7 @@ export default function  () {
         </div>
 
         <center>
-            <button className="btn btn-danger btn-large">
-                continue <img src={arrowIcon} alt="arrow_icon" />
-            </button>
+            <Button title={"Continue"} image={arrowIcon} />
         </center>
 
     </section>
