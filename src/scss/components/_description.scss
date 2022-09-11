@@ -1,0 +1,22 @@
+.description {
+    background-color: var(--cl-primary-opaque);
+    padding: 3.5rem 3.5rem 5rem;
+    border: 2px solid var(--cl-border);
+    border-radius: 11px;
+    backdrop-filter: blur(10px);
+
+    &--p {
+        font-size: 2rem;
+        font-weight: 500;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .btn {
+        img {
+            margin-left: 5px;
+        }
+    }
+}

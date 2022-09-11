@@ -16,7 +16,9 @@ function Nav(): JSX.Element {
         </a>
         <input type="checkbox" id="toggleNav" />
         <label htmlFor="toggleNav" className='burgerBtn'>
-            ☰
+            <span></span>
+            <span></span>
+            <span></span>
         </label>
         <div className="links_group">
             <a href="#">

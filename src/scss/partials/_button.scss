@@ -1,0 +1,22 @@
+.btn {
+    font-size: 1.9rem;
+    padding: 1.65rem 2rem;
+    text-transform: uppercase;
+    border-radius: 20rem;
+    cursor: pointer;
+    font-weight: 500;
+
+    &-large {
+        min-width: 35rem;
+    }
+
+    &-danger {
+        background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .5));
+        background-color: #CA0B0F;
+        transition: .05s transform;
+
+        &:active {
+            transform: scaleX(.96) translateY(2px);
+        }
+    }
+}
