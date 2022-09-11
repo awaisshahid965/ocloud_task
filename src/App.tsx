@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 
 // components imports
 import Nav from './components/Nav'
@@ -7,7 +7,7 @@ import Description from './components/Description'
 // images import
 import bgImg from './assets/bgimg.png'
 
-function App() {
+function App(): JSX.Element {
   return (
     <main className="App" style={{backgroundImage: `url(${bgImg})`}}>
       <div className="main-row">

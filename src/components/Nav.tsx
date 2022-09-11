@@ -5,11 +5,14 @@ import logo from '../assets/logo2.png';
 import _3pplIcon from '../assets/3-people.png';
 import logoutIcon from '../assets/logout.png';
 
-export default function Nav() {
+// partials imports
+import ImageIcon from '../partials/ImageIcon'
+
+function Nav(): JSX.Element {
   return (
     <nav className="nav">
         <a href="#" className='logo'>
-            <img src={logo} alt="site_logo" />
+            <ImageIcon image={logo} />
         </a>
         <input type="checkbox" id="toggleNav" />
         <label htmlFor="toggleNav" className='burgerBtn'>
@@ -17,14 +20,16 @@ export default function Nav() {
         </label>
         <div className="links_group">
             <a href="#">
-                <img src={_3pplIcon} alt="connected_images" />
+                <ImageIcon image={_3pplIcon} />
                 <span>6 connected</span>
             </a>
             <a href="#">
-                <img src={logoutIcon} alt="" />
+                <ImageIcon image={logoutIcon} />
                 <span>Log out</span>
             </a>
         </div>
     </nav>
   )
 }
+
+export default Nav;
