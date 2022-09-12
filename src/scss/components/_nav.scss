@@ -4,6 +4,10 @@
   padding: 3.5rem 0;
   position: relative;
 
+  @media (max-width: 580px) {
+    padding: 3.5rem 5px;
+  }
+
   .links_group {
 
     a {
